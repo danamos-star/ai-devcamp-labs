@@ -1,12 +1,16 @@
 import os
 import pathlib
+from typing import Any, Optional
 from google.adk.agents import Agent
+from google.adk.agents.callback_context import CallbackContext
 from google.adk.skills import load_skill_from_dir
 from google.adk.tools import google_search
 from google.adk.tools.agent_tool import AgentTool
+from google.adk.tools.base_tool import BaseTool
 from google.adk.tools.mcp_tool import McpToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPConnectionParams
 from google.adk.tools.skill_toolset import SkillToolset
+from google.adk.tools.tool_context import ToolContext
 from .tools import generate_image
 
 SKILLS_DIR = pathlib.Path(__file__).resolve().parents[2] / "skills"
@@ -39,6 +43,35 @@ buffer_toolset = McpToolset(
     require_confirmation=True,
 )
 
+# idea -> researching -> drafting -> awaiting_approval -> posted
+_TOOL_STAGES = {
+    "web_researcher": "researching",
+    "load_skill": "drafting",
+    "generate_image": "drafting",
+}
+
+
+def _init_stage(callback_context: CallbackContext) -> None:
+    if "pipeline_stage" not in callback_context.state:
+        callback_context.state["pipeline_stage"] = "idea"
+
+
+def _track_stage(
+    tool: BaseTool, args: dict[str, Any], tool_context: ToolContext, tool_response: dict
+) -> Optional[dict]:
+    if tool.name in _TOOL_STAGES:
+        tool_context.state["pipeline_stage"] = _TOOL_STAGES[tool.name]
+    elif tool.name in ("create_post", "linkedin_create_post") and tool_response.get("isError") is False:
+        tool_context.state["pipeline_stage"] = "posted"  # only a completed MCP call
+    return None  # never modify the tool result
+
+
+def _stage_after_agent(callback_context: CallbackContext) -> None:
+    # A turn that ends mid-pipeline is waiting on the user (draft approval).
+    if callback_context.state.get("pipeline_stage") in ("researching", "drafting"):
+        callback_context.state["pipeline_stage"] = "awaiting_approval"
+
+
 root_agent = Agent(
     name="social_poster",
     model="gemini-flash-latest",
@@ -55,4 +88,7 @@ Posting rules (strict):
 - Only post AFTER the user has explicitly approved the exact draft shown to them. "Yes", "post it" counts; enthusiasm about the idea does not.
 - After posting, share the returned confirmation with the user.""",
     tools=[AgentTool(agent=search_agent), generate_image, skill_toolset, buffer_toolset],
+    before_agent_callback=_init_stage,
+    after_tool_callback=_track_stage,
+    after_agent_callback=_stage_after_agent,
 )
