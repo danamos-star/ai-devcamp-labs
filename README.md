@@ -68,3 +68,48 @@ gcp-setup.sh             one-time Google Cloud setup: APIs, templates, grants
 | Doc | Covers |
 |---|---|
 | [LEARNINGS.md](docs/LEARNINGS.md) | What broke and why, by pillar |
+
+## Lab 2 - Scale screenshots
+
+1. Deployment on Agent Runtime
+   <img width="1423" height="441" alt="image" src="https://github.com/user-attachments/assets/842e1523-d43b-420a-9fd2-a2d67cb5a9b3" />
+
+2. AG-UI server-sent event stream showing live agent execution, pipeline state updates, tool calls, and model response
+   <img width="1095" height="609" alt="image" src="https://github.com/user-attachments/assets/9b9f3f5e-89f9-4872-8d13-78e444d7adea" />
+
+3. Agent Sessions
+   <img width="1420" height="491" alt="image" src="https://github.com/user-attachments/assets/ab310e6d-51f8-458e-b366-f63f69c6f73d" />
+
+4. Memory extraction and recall
+   <img width="1098" height="768" alt="image" src="https://github.com/user-attachments/assets/41d68f28-dfd1-4558-946b-34af0ae60995" />
+
+   <img width="1110" height="679" alt="image" src="https://github.com/user-attachments/assets/d33cc1f9-6bf0-4d3d-8572-f1a1a134d4aa" />
+
+   <img width="1878" height="659" alt="image" src="https://github.com/user-attachments/assets/89793b2e-8dcc-45e7-aa54-765cea3bb7ac" />
+
+   <img width="1795" height="664" alt="image" src="https://github.com/user-attachments/assets/48bbaeb4-9a8e-42ab-b73f-b899b85a5e49" />
+
+
+5. Full-Stack orchestration and Human-in-the-loop approval:
+   <img width="1870" height="895" alt="image" src="https://github.com/user-attachments/assets/449836e6-5bfd-4c09-8095-41917ff0f13a" />
+
+   <img width="1577" height="818" alt="image" src="https://github.com/user-attachments/assets/e71c41bb-da53-49bc-862f-f78975f20231" />
+
+6. Frontend Cloud Run deployment
+   <img width="1093" height="505" alt="image" src="https://github.com/user-attachments/assets/4a154c9e-86e8-430a-a41e-8065dfe800b9" />
+
+7. Reasoning Engine observability
+   <img width="1096" height="686" alt="image" src="https://github.com/user-attachments/assets/4569284c-1df1-4a8e-b314-2813bcb3283c" />
+
+8. Environment clean-Up and teardown verification
+   <img width="601" height="279" alt="image" src="https://github.com/user-attachments/assets/e199fb67-e53c-4fc8-a8dd-e3ae540886d4" />
+
+
+
+
+
+
+
+
+
+
