@@ -102,6 +102,7 @@ gcp-setup.sh             one-time Google Cloud setup: APIs, templates, grants
    <img width="1096" height="686" alt="image" src="https://github.com/user-attachments/assets/4569284c-1df1-4a8e-b314-2813bcb3283c" />
 
 8. Environment clean-Up and teardown verification
+   
    <img width="601" height="279" alt="image" src="https://github.com/user-attachments/assets/e199fb67-e53c-4fc8-a8dd-e3ae540886d4" />
 
 
