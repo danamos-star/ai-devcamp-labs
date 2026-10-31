@@ -105,6 +105,46 @@ gcp-setup.sh             one-time Google Cloud setup: APIs, templates, grants
    
    <img width="601" height="279" alt="image" src="https://github.com/user-attachments/assets/e199fb67-e53c-4fc8-a8dd-e3ae540886d4" />
 
+## Lab 3 - Govern screenshots
+
+1. Model Armor guardrail actively caught prompt injection attempt
+
+   <img width="583" height="433" alt="image" src="https://github.com/user-attachments/assets/9100f35a-0cb0-4c6e-afde-69536fc2e1fe" />
+
+2. Automated evaluation pass results: confirms the agent successfully blocks prompt injections in automated testing
+
+   <img width="814" height="186" alt="image" src="https://github.com/user-attachments/assets/cd38ac59-b524-4692-a14e-e937c610be0b" />
+
+3. Cloud DLP in action
+
+   <img width="791" height="662" alt="image" src="https://github.com/user-attachments/assets/33c578c6-73a5-4a09-85c9-7139b8066586" />
+
+4. Agent Registry and MCP Capabilities & Discovery
+
+   <img width="828" height="242" alt="image" src="https://github.com/user-attachments/assets/d12fec06-ca60-4ab1-bad7-343030638c95" />
+
+5. Policy creation
+
+   <img width="1169" height="225" alt="image" src="https://github.com/user-attachments/assets/002807ef-baa6-40ee-b37d-3e6264abcc31" />
+
+   <img width="1353" height="625" alt="image" src="https://github.com/user-attachments/assets/1c20e1de-6456-4c6c-abfb-13b0b0f32c40" />
+
+6. Gateway-Level enforcement
+
+   <img width="1049" height="250" alt="image" src="https://github.com/user-attachments/assets/848202f5-30ce-46ce-b6ff-a696725b8cf4" />
+
+   <img width="1332" height="668" alt="image" src="https://github.com/user-attachments/assets/f05c0fb4-efc7-4d64-9079-8c94be23be54" />
+
+   
+
+
+
+
+
+
+
+
+
 
 
 
