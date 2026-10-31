@@ -135,7 +135,37 @@ gcp-setup.sh             one-time Google Cloud setup: APIs, templates, grants
 
    <img width="1332" height="668" alt="image" src="https://github.com/user-attachments/assets/f05c0fb4-efc7-4d64-9079-8c94be23be54" />
 
+
+## Lab 4 - Optimise screenshots
+
+1. Golden Evaluation Gate Pass
+
+   <img width="690" height="304" alt="image" src="https://github.com/user-attachments/assets/a645afea-42f7-4564-9259-2addcfc8e0a7" />
+
+   <img width="691" height="237" alt="image" src="https://github.com/user-attachments/assets/e2446b7e-99fc-4648-8a30-a266953d938d" />
+
+2. BigQuery Agent analytics output
+
+   <img width="885" height="412" alt="image" src="https://github.com/user-attachments/assets/818c3462-6e07-4737-b5e4-92cfc428ff1b" />
+
+3. Eval-Gate Proof (Red vs. Green / Fail Closed)
+
+   <img width="892" height="180" alt="image" src="https://github.com/user-attachments/assets/86a70569-0eec-41cd-b8c1-dca0ea99bfeb" />
+
+4. Model comparison / latency and cost optimization matrix
+
+   <img width="800" height="489" alt="image" src="https://github.com/user-attachments/assets/8c218f0f-d913-4d98-a383-2c0dc2a3eb55" />
+
    
+
+   
+
+
+
+
+
+
+
 
 
 
